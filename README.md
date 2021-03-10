@@ -46,10 +46,6 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 ```npm i && cds run```
 
-- Metadata
-- In service, show oData V4 Functions e.g. Books?$filter=ID eq 1, Books(1)
-- Temporal SQL database
-
 ### DB
 
 First login to CF with ```cf login```
@@ -74,7 +70,6 @@ Add this to package.json if you use a HANA Cloud
   }
 ```
 
-- HANA Service in CF anschauen
 - SAP HANA Projects -> Bind cap_sample-db to local project
 - Open DB Explorer:
   If the BAS HANA Tools are active, you can bind your just created HANA Instance to your BAS project.
@@ -121,11 +116,6 @@ If we don't want to push both modules separatly, we can define a descriptor file
 Add mta.yaml file:
 
 ```cds add mta```
-
-- Explain mta.yaml:
-  - build commands
-  - modules
-  - resources
 
 - Build MTA with ```mbt build```
 - Deploy MTA with ```cf deploy mta_archives/cap_sample_1.0.0.mtar```
