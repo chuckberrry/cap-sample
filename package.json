@@ -1,34 +1,42 @@
 {
-  "name": "cap_sample",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^4",
-    "express": "^4",
-    "@sap/hana-client": "^2.7.23"
-  },
-  "devDependencies": {
-    "@sap/ux-specification": "^1.84.5",
-    "sqlite3": "5.0.0"
-  },
-  "scripts": {
-    "start": "cds run"
-  },
-  "cds": {
-    "hana": {
-      "deploy-format": "hdbtable",
-      "syntax": "hdi"
+    "name": "cap_sample",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^4",
+        "@sap/hana-client": "^2.7.23",
+        "express": "^4",
+        "passport": "^0.4.1"
     },
-    "requires": {
-      "db": {
-        "kind": "hana"
-      }
-    }
-  },
-  "sapux": [
-    "app/books"
-  ]
+    "devDependencies": {
+        "@sap/ux-specification": "^1.84.5",
+        "sqlite3": "5.0.0"
+    },
+    "scripts": {
+        "start": "cds run"
+    },
+    "cds": {
+        "hana": {
+            "deploy-format": "hdbtable",
+            "syntax": "hdi"
+        },
+        "requires": {
+            "db": {
+                "kind": "sql",
+                "model": [
+                    "db",
+                    "srv"
+                ]
+            },
+            "auth": {
+                "strategy": "dummy"
+            }
+        }
+    },
+    "sapux": [
+        "app/app"
+    ]
 }
