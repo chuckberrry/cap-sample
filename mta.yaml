@@ -65,7 +65,7 @@ modules:
       target-path: resources/
 - name: mybookshopapp
   type: html5
-  path: app/app
+  path: app/books
   build-parameters:
     build-result: dist
     builder: custom
