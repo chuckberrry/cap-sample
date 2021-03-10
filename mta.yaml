@@ -8,6 +8,7 @@ modules:
     path: gen/srv
     requires:
       - name: cap_sample-db
+      - name: cap_sample-log
     provides:
       - name: srv-api
         properties:
@@ -103,6 +104,12 @@ resources:
       service: xsuaa
       service-name: cap_sample-xsuaa-service
       service-plan: application
+  - name: cap_sample-log
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: application-logs
+      service-plan: lite
+  
 parameters:
   deploy_mode: html5-repo
 build-parameters:
