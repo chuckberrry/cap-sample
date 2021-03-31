@@ -107,14 +107,7 @@ parameters:
   deploy_mode: html5-repo
 build-parameters:
   before-all:
-<<<<<<< HEAD
     - builder: custom
       commands:
         - npm install --production
         - npx -p @sap/cds-dk cds build --production
-=======
-  - builder: custom
-    commands:
-    - npm install --production
-    - npx -p @sap/cds-dk cds build --production
->>>>>>> eaca037d7b5114bdb4e4a62359f6921a837e5ea8
